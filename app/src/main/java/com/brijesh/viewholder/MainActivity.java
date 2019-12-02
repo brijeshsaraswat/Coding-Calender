@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(MainActivity.this, "Opsss.... Something is wrong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Oopsss.... Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
 

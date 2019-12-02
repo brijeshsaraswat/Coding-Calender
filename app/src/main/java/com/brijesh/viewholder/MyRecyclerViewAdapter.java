@@ -31,6 +31,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.URI;
 import java.util.ArrayList;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.DataObjectHolder> {
@@ -75,18 +76,14 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             start_time = (TextView)itemView.findViewById(R.id.start_time);
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setClickable(true);
-            itemView.setOnClickListener(new View.OnClickListener() {
+            /*itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
-                        }
-
-                    }
+                    Log.i(LOG_TAG,"Something's happening"+getAdapterPosition());
+                    int position = getAdapterPosition()+1;
+                    Log.i(LOG_TAG,"Something's just happening"+position);
                 }
-            });
+            });*/
 
         }
 
@@ -107,12 +104,25 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     }
 
     @Override
-    public void onBindViewHolder(DataObjectHolder holder, int position) {
+    public void onBindViewHolder(DataObjectHolder holder, final int position) {
         holder.desc.setText(mDataset.get(position).getCODE());
         holder.end_time.setText(mDataset.get(position).getEND_TIME());
         holder.start_time.setText(mDataset.get(position).getSTART_TIME());
         holder.name.setText(mDataset.get(position).getNAME());
         holder.link.setText(mDataset.get(position).getURL());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos=position;
+                String url=mDataset.get(position).getURL();
+                Log.i(LOG_TAG,"Something's happening"+pos);
+                Log.i(LOG_TAG,"Something's just here happening"+pos);
+                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                context.startActivity(intent);
+            }
+        });
+        Log.i(LOG_TAG,"Something's on bind happening"+mDataset.get(position).getURL());
+
     }
 
     public void addItem(DataObject dataObj, int index) {
@@ -130,7 +140,4 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         return mDataset.size();
     }
 
-    public interface MyClickListener {
-        public void onItemClick(int position, View v);
-    }
 }

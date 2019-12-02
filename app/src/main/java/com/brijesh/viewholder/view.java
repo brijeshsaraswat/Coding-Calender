@@ -12,7 +12,7 @@ import android.webkit.WebView;
 public class view extends Fragment {
     private WebView webview;
     String ShowOrHideWebViewInitialUse = "show";
-    String url;
+    String url="www.google.com";
 
     @Nullable
     @Override

@@ -62,10 +62,12 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list=new ArrayList<DataObject>();
-                //for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
-                //{
-                    DataObject p = dataSnapshot.child("1").getValue(DataObject.class);
-//                    list.add(p);
+                int i=0;
+                for(DataSnapshot postSnapshot: dataSnapshot.getChildren())
+                {
+                   /* String str=Integer.toString(i);
+                  DataObject p = dataSnapshot.child("str").getValue(DataObject.class);
+                  list.add(p);
                 DataObject q = dataSnapshot.child("2").getValue(DataObject.class);
                 DataObject r = dataSnapshot.child("3").getValue(DataObject.class);
                 list.add(p);
@@ -74,9 +76,11 @@ public class MainActivity extends AppCompatActivity
                 DataObject t = dataSnapshot.child("3").getValue(DataObject.class);
                 list.add(s);
                 list.add(t);
-                list.add(r);
+                list.add(r);*/
+                   DataObject  p =postSnapshot.getValue(DataObject.class);
+                   list.add(p);
 
-                //}
+                }
                 mAdapter = new MyRecyclerViewAdapter(MainActivity.this,list);
                 mRecyclerView.setAdapter(mAdapter);
 

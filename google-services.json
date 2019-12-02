@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "426948262986",
+    "firebase_url": "https://viewholder-7c6a4.firebaseio.com",
+    "project_id": "viewholder-7c6a4",
+    "storage_bucket": "viewholder-7c6a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426948262986:android:1058e3a9586b1c95",
+        "android_client_info": {
+          "package_name": "com.brijesh.viewholder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426948262986-8itsg74gnmt16i376o0g17flb3d28c64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.brijesh.viewholder",
+            "certificate_hash": "098c66cf21a9d608d5f6276f9fb0629de629a271"
+          }
+        },
+        {
+          "client_id": "426948262986-icer5vrk10hju7tscbq6m6dv7knvkekg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbzI5AeKkqBD7NkuNpFJp87Gyq_ya9nBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426948262986-icer5vrk10hju7tscbq6m6dv7knvkekg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

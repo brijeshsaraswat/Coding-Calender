@@ -5,8 +5,8 @@
 
 ###SCREENSHOTS
 -Past Contest:
-![Past Contests Screenshot](https://drive.google.com/file/d/1wYkOCQqhB6gFnR6tqbphQqFPNrqbJvor/view?usp=sharing)
+![Past Contests Screenshot](https://github.com/brijeshsaraswat/Coding-Calender/blob/master/app/src/main/res/Screenshot_20200314-233556_2.png)
 -Present Contest:
-![Present Contests Screenshot](https://drive.google.com/file/d/1waecUqDsUOJZeUZE0JuU-ZcmPR6Hh4ll/view?usp=sharing)
+![Present Contests Screenshot](https://github.com/brijeshsaraswat/Coding-Calender/blob/master/app/src/main/res/Screenshot_20200314-233443_2.png)
 -Future Contest:
-![Future Contests Screenshot](https://drive.google.com/file/d/1waecUqDsUOJZeUZE0JuU-ZcmPR6Hh4ll/view?usp=sharing)
+![Future Contests Screenshot](https://github.com/brijeshsaraswat/Coding-Calender/blob/master/app/src/main/res/Screenshot_20200314-233229_2.png)
